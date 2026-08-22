@@ -22,9 +22,7 @@ export class SSOIERProblemParser extends Parser {
      * The website changes its HTML structure from time to time,
      * so we try multiple selectors as fallbacks to keep the parser working.
      */
-    const container =
-      elem.querySelector('center table td') ||
-      elem.querySelector('body > center > table td');
+    const container = elem.querySelector('center table td') || elem.querySelector('body > center > table td');
 
     task.setName(container.querySelector('h3').textContent);
 
